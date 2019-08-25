@@ -12,7 +12,7 @@ import '../../assets/common.css';
 
 export const tableRow = (props) => {
   let list = []
-  props.map((value, index) => {
+  props.forEach((value, index) => {
     list.push(
       <tr
         key={`tr-${index}`}

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import {appText} from '../atoms/appText';
 import Loading from '../pages/loading';
 import {progress} from '../molecules/table';
 import {eventContainer} from '../molecules/event';
