@@ -19,7 +19,7 @@ export default class App extends Component {
 
   componentDidMount(){
     axios
-      .get(process.env.REACT_APP_API_KEY)
+      .get(process.env.REACT_APP_API_URL)
       .then((res) => {
         this.setState(res.data)
       })
