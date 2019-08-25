@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 import {appText} from '../atoms/appText';
-import ButtonContents from '../molecules/buttonContents'
 import Loading from '../pages/loading';
 import {progress} from '../molecules/table';
 
@@ -16,14 +15,6 @@ export default class App extends Component {
       count: 0,
       reason: ''
     }
-  }
-
-  countUp(){
-    this.setState({count: this.state.count += 1});
-  }
-
-  countDown(){
-    this.setState({count: this.state.count -= 1});
   }
 
   componentDidMount(){
@@ -43,10 +34,6 @@ export default class App extends Component {
     return (
       <div className="app white-bc">
         {appText(this.state.count, 60)}
-        <ButtonContents
-          countUp={this.countUp.bind(this)}
-          countDown={this.countDown.bind(this)}
-        />
         {appText('最近の死は.........' + this.state.reason, 24)}
         {progress([{
           progress: 'string',
