@@ -7,7 +7,7 @@ import {progress} from '../molecules/table';
 import {eventContainer} from '../molecules/event';
 
 import '../../assets/common.css';
-import '../../assets/style.css';
+import '../../assets/index.css';
 
 export default class App extends Component {
   constructor(){
@@ -33,9 +33,6 @@ export default class App extends Component {
       )
     }
     return (
-      <div className="app white-bc">
-        {appText(this.state.count, 60)}
-        {appText('最近の死は.........' + this.state.reason, 24)}
         {progress([{
           progress: 'string',
           count: 1,
@@ -46,6 +43,29 @@ export default class App extends Component {
           count: 1,
           time: 12
         }])}
+      <div 
+        className="app"
+      >
+        <section
+          className="title-container"
+        >
+          <h1>現在のdeath count</h1>
+          <p
+            className='count-font'
+          >
+            {this.state.count}
+          </p>
+        </section>
+        <p
+          className="comment"
+        >
+          {`最近の死は.........${this.state.reason}`}
+        </p>
+        <section
+          className="progress-container"
+        >
+          <h2>進捗</h2>
+        </section>
         {eventContainer()}
       </div>
     );
