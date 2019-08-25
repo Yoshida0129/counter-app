@@ -33,16 +33,6 @@ export default class App extends Component {
       )
     }
     return (
-        {progress([{
-          progress: 'string',
-          count: 1,
-          time: 12
-        },
-        {
-          progress: 'string',
-          count: 1,
-          time: 12
-        }])}
       <div 
         className="app"
       >
@@ -65,6 +55,7 @@ export default class App extends Component {
           className="progress-container"
         >
           <h2>進捗</h2>
+          {progress(this.state.progress)}
         </section>
         {eventContainer()}
       </div>
