@@ -1,0 +1,29 @@
+
+
+.main-bc {
+  background-color: #61dafb;
+}
+
+.black-bc {
+  background-color: #282c34;
+}
+
+.white-bc {
+  background-color: #fbfbfb;
+}
+
+.grey-bc {
+  background-color: #ebebeb;
+}
+
+.tx-center{
+  text-align: center;
+}
+
+.th-row {
+  border-bottom: 1px solid #171b23;
+}
+
+.td-row {
+  border-bottom: 1px solid #282c34;
+}
