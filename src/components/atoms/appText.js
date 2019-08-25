@@ -7,7 +7,8 @@ export const appText = (content, size) => {
   return(
     <p
       style={{
-        'fontSize': size
+        'fontSize': size,
+        'textAlign': 'center'
       }}
     >
       {content}

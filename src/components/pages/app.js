@@ -4,6 +4,7 @@ import axios from 'axios';
 import {appText} from '../atoms/appText';
 import Loading from '../pages/loading';
 import {progress} from '../molecules/table';
+import {eventContainer} from '../molecules/event';
 
 import '../../assets/common.css';
 import '../../assets/style.css';
@@ -45,6 +46,7 @@ export default class App extends Component {
           count: 1,
           time: 12
         }])}
+        {eventContainer()}
       </div>
     );
   }
