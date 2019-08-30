@@ -1,5 +1,22 @@
 import React from 'react';
-import '../../assets/common.css';
+import '../assets/common.css';
+/*
+* content => string : number
+* size => number
+*/
+export const appText = (content, size) => {
+  return(
+    <p
+      style={{
+        'fontSize': size,
+        'textAlign': 'center'
+      }}
+    >
+      {content}
+    </p>
+  )
+}
+
 /*
 *[
   {
@@ -9,7 +26,6 @@ import '../../assets/common.css';
   }
 ]
 */
-
 export const tableRow = (props) => {
   let list = []
   props.forEach((value, index) => {

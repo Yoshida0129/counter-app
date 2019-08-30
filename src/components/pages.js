@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import Loading from '../pages/loading';
-import {progress} from '../molecules/table';
-import {eventContainer} from '../molecules/event';
+import {appText} from './atoms';
+import {progress, eventContainer, finishTweet} from './molecules';
 
-import '../../assets/common.css';
-import '../../assets/index.css';
+import '../assets/common.css';
+import '../assets/index.css';
 
 export default class App extends Component {
   constructor(){
@@ -57,7 +56,26 @@ export default class App extends Component {
           {progress(this.state.progress)}
         </section>
         {eventContainer()}
+        {finishTweet()}
+        {appText('ggwp', 18)}
       </div>
     );
+  }
+}
+
+export class Loading extends Component {
+  constructor(){
+    super()
+    this.state = {
+      dot: '...'
+    }
+  }
+  
+  render(){
+    return (
+      <div>
+        Loading now {this.state.dot}
+      </div>
+    )
   }
 }
