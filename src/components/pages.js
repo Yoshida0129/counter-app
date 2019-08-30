@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import {appText} from './atoms';
 import {progress, eventContainer, finishTweet} from './molecules';
@@ -8,6 +9,17 @@ import '../assets/common.css';
 import '../assets/index.css';
 
 export default class App extends Component {
+  render() {
+    return(
+      <BrowserRouter>
+        <Route exact path="/" component={Counter}/>
+        <Route path="/tournament" component={Tournament}/>
+      </BrowserRouter>
+    )
+  }
+}
+
+class Counter extends Component {
   constructor(){
     super()
     this.state = {
