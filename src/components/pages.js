@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import {appText} from './atoms';
-import {progress, eventContainer, finishTweet} from './molecules';
+import {progress, eventContainer, commentList} from './molecules';
 
 import '../assets/common.css';
 import '../assets/index.css';
@@ -67,15 +66,24 @@ class Counter extends Component {
           <h2>進捗</h2>
           {progress(this.state.progress)}
         </section>
+        {commentList(this.state.comment)}
         {eventContainer()}
-        {finishTweet()}
-        {appText('ggwp', 18)}
       </div>
     );
   }
 }
 
-export class Loading extends Component {
+class Tournament extends Component {
+  render() {
+    return(
+      <div>
+        <p>製作中・・・（見通しは立ってない）</p>
+      </div>
+    )
+  }
+}
+
+class Loading extends Component {
   constructor(){
     super()
     this.state = {

@@ -4,18 +4,16 @@ import '../assets/common.css';
 * content => string : number
 * size => number
 */
-export const appText = (content, size) => {
-  return(
-    <p
-      style={{
-        'fontSize': size,
-        'textAlign': 'center'
-      }}
-    >
-      {content}
-    </p>
-  )
-}
+export const appText = (content, size) => (
+  <p
+    style={{
+      'fontSize': size,
+      'textAlign': 'center'
+    }}
+  >
+    {content}
+  </p>
+)
 
 /*
 *[
@@ -60,3 +58,10 @@ export const tableRow = (props) => {
   })
   return list
 }
+
+/**
+ * 
+ * @param array comment 
+ */
+export const comments = (comment) => comment.map((val, index) => <li key={`comment${index}`}>{ val }</li>)
+
