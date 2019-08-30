@@ -25,7 +25,6 @@ export const eventContainer = () => {
 * @param {array} props
 */
 export const progress = (props) => {
-  console.log(props)
   return(
     <table>
       <thead>
