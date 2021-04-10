@@ -1,20 +1,6 @@
-import React from 'react';
-import '../assets/common.css';
-/*
-* content => string : number
-* size => number
-*/
-export const appText = (content, size) => (
-  <p
-    style={{
-      'fontSize': size,
-      'textAlign': 'center'
-    }}
-  >
-    {content}
-  </p>
-)
 
+import React from 'react';
+import '../../assets/common.css';
 /*
 *[
   {
@@ -24,7 +10,7 @@ export const appText = (content, size) => (
   }
 ]
 */
-export const tableRow = (props) => {
+const tableRow = (props) => {
   let list = []
   props.forEach((value, index) => {
     list.push(
@@ -59,9 +45,4 @@ export const tableRow = (props) => {
   return list
 }
 
-/**
- * 
- * @param array comment 
- */
-export const comments = (comment) => comment.map((val, index) => <li key={`comment${index}`}>{ val }</li>)
-
+export default tableRow
