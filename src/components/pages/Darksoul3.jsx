@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Top from '../templates/top'
 
-import '../../assets/common.css';
-import '../../assets/index.css';
 import requestGet from '../../requestGet';
 import siteUrl from '../organisms/siteUrl'
 

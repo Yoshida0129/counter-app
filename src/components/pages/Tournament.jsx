@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-import '../../assets/common.css';
-import '../../assets/index.css';
-
 export default class Tournament extends Component {
   render() {
     return(
