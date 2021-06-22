@@ -10,13 +10,7 @@ import '../../assets/common.css';
 import '../../assets/index.css';
 
 const top = ({data}) => {
-  if(!data.reason){
-    return(
-      <>
-        {loading()}
-      </>
-    )
-  }
+  if(!data.reason) return loading()
   return (
     <div className="app">
       <section className="title-container">

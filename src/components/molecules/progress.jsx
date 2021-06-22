@@ -11,9 +11,7 @@ const progress = (props) => {
   return(
     <table>
       <thead>
-        <tr
-          className='th-row'
-        >
+        <tr className='th-row'>
           <th>進行度</th>
           <th>デス数</th>
           <th>かかった時間</th>
