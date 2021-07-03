@@ -1,45 +1,30 @@
 import React from 'react';
 
-import progress from '../molecules/progress'
+import timetableContainer from '../organisms/timetableContainer';
 import commentList from '../molecules/commentList'
-
-import Loading from '../organisms/Loading'
+import loading from './loading'
+import deathCount from '../organisms/deathCount';
+import reason from '../organisms/reason'
 
 import '../../assets/common.css';
 import '../../assets/index.css';
 
 const top = ({data}) => {
-  if(!data.reason){
-    return(
-      <Loading/>
-    )
-  }
+  if(!data.reason) return loading()
   return (
-    <div 
-      className="app"
-    >
-      <section
-        className="title-container"
-      >
-        <h1>現在のdeath count</h1>
-        <p
-          className='count-font'
-        >
-          {data.count}
-        </p>
+    <div className="app">
+      <section className="title-container">
+        {deathCount(data.count)}
       </section>
-      <p
-        className="comment"
-      >
-        {`最近の死は.........${data.reason}`}
-      </p>
-      <section
-        className="progress-container"
-      >
-        <h2>進捗</h2>
-        {progress(data.progress)}
+      <section>
+        {reason(data.reason)}
       </section>
-      {commentList(data.comment)}
+      <section className="progress-container">
+        {timetableContainer(data.progress)}
+      </section>
+      <section>
+        {commentList(data.comment)}
+      </section>
     </div>
   );
 }
