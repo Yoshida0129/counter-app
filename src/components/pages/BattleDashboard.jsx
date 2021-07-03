@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Top from '../templates/top'
 
-import requestGet from '../../logic/requestGet';
 import siteUrl from '../organisms/siteUrl'
+import requestGet from '../../logic/requestGet';
 
-export default class Counter extends Component {
+export default class BloodBorne extends Component {
   constructor(){
     super()
     this.state = {
@@ -14,7 +14,8 @@ export default class Counter extends Component {
   }
 
   async componentDidMount(){
-    const siteData = await requestGet(process.env.REACT_APP_DARKSOUL3_DATA_URL)
+    const url = `${process.env.REACT_APP_BATTLE_URL}?name=${this.props.match.params.name}`
+    const siteData = await requestGet(url)
     this.setState(siteData.data)
   }
 

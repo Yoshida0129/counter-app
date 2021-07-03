@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Top from '../templates/top'
 
 import siteUrl from '../organisms/siteUrl'
-import requestGet from '../../requestGet';
+import requestGet from '../../logic/requestGet';
 
 export default class BloodBorne extends Component {
   constructor(){

@@ -4,7 +4,7 @@ import '../../assets/common.css';
 * content => string : number
 * size => number
 */
-const appText = (content, size) => (
+const appText = ({content, size=11}) => (
   <p
     style={{
       'fontSize': size,
